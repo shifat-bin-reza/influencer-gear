@@ -1,0 +1,155 @@
+/* common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* header styles */
+
+.container {
+  padding: 50px 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bars {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.cart {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+/* header banner */
+
+.header-banner {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header-banner-left h1 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.header-banner-left p {
+  font-size: 16px;
+  margin: 20px 0;
+  width: 75%;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.header-banner-left button {
+  background-color: rgba(224, 44, 109, 1);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-banner-right {
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.header-banner-right img {
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header-banner-left h1 {
+    font-size: 42px;
+  }
+  .header-banner-left p {
+    font-size: 14px;
+  }
+
+  .header-banner-right img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header-banner-left p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-banner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .logo {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .bars,
+  .cart {
+    display: block;
+  }
+}
