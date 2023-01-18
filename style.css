@@ -124,6 +124,45 @@ nav {
   text-align: center;
 }
 
+.popular-collection-items {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.collection-item-ratings {
+  display: flex;
+  gap: 20px;
+}
+
+.stars img {
+  width: 14px;
+}
+
+.see-more-link {
+  margin-top: 20px;
+}
+
+.see-more-link div {
+  display: inline-block;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+.see-more-link div a {
+  color: #E02C6D;
+}
+
+.see-more-link div a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 1400px) {
   .container {
     width: 1400px;
@@ -187,7 +226,8 @@ nav {
     gap: 40px;
   }
 
-  .header-banner-left > h1, p {
+  .header-banner-left > h1,
+  .header-banner-left-description {
     text-align: center;
   }
 
@@ -197,6 +237,10 @@ nav {
 
   .company-brands {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .popular-collection-items {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -212,5 +256,26 @@ nav {
 
   .company-brands {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .popular-collection-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-body > h2,
+  .card-body > p,
+  .collection-item-description {
+    text-align: center;
+  }
+
+  .collection-item-ratings {
+    justify-content: center;
+  }
+
+  .see-more-link div {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
